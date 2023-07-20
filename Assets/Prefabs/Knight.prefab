@@ -1824,9 +1824,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6294280966630841666}
+  - component: {fileID: 4895432353485268865}
+  - component: {fileID: 4895432353485268860}
   - component: {fileID: 124389830455281464}
-  - component: {fileID: 6634391161299060730}
-  - component: {fileID: 6634391161299060731}
   - component: {fileID: 278702509}
   m_Layer: 0
   m_Name: Knight
@@ -1844,7 +1844,7 @@ Transform:
   m_GameObject: {fileID: 6634391161299060728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1948253225379888598}
@@ -1855,6 +1855,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &4895432353485268865
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6634391161299060728}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4895432353485268860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6634391161299060728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f2b11a4ac48d64ab67b6a7326e609f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Knight
+  targets: 0200000000000000
+  team: 1
+  unitType: 0
+  attackSpeed: 1.2
+  attackRange: 1.2
+  hitPoints: 1380
+  damage: 167
+  currentTarget: {fileID: 0}
+  attackCooldown: 0
+  mana: 3
+  unitAmount: 1
+  movementSpeed: 60
+  sightRange: 5.5
+  rightPath: {fileID: 1797837711214718355, guid: eb803a045ada31546ad7cc94d84fc886,
+    type: 3}
+  leftPath: {fileID: 7548727837853495108, guid: b66e22a669630d14cbe21a74845174e4,
+    type: 3}
 --- !u!95 &124389830455281464
 Animator:
   serializedVersion: 5
@@ -1876,42 +1928,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!195 &6634391161299060730
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6634391161299060728}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.6
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &6634391161299060731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6634391161299060728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a1927d2d7ec4dd4e9aefb3e19e57706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unit: {fileID: 11400000, guid: 5031a324d7eed9640ac69b989b016f0c, type: 2}
-  currentTarget: {fileID: 0}
 --- !u!136 &278702509
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1920,7 +1936,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6634391161299060728}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.3
   m_Height: 1.7572587

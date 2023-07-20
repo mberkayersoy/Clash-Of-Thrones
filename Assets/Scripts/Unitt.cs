@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Unit", menuName = "Unit/Create Unit", order = 0)]
-public class Unit : ScriptableObject
+public class Unitt : ScriptableObject
 {
     public string unitName;
     public int mana;
@@ -19,15 +19,3 @@ public class Unit : ScriptableObject
     public UnitType pos;
 }
 
-public enum UnitType
-{
-    Ground,
-    Air,
-    Tower
-}
-
-public enum Team
-{
-    Player,
-    Enemy,
-}

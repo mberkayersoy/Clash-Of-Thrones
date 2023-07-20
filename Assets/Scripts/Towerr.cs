@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Tower", menuName = "Tower/Create Tower", order = 0)]
-public class Tower : ScriptableObject
+public class Towerr : ScriptableObject
 {
     public string unitName;
     public int damage;
